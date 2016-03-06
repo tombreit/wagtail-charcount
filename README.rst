@@ -2,7 +2,7 @@
 wagtail-linkchecker
 ===============
 
-Blurb here
+A wagtail character and word counting plugin for RichTextFields.
 
 Installing
 ==========
