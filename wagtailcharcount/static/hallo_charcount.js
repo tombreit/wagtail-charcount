@@ -96,14 +96,13 @@ $(function (){
 			} else {
 				helpBox.show();
 				helpBox.html(
-					charCountElemText + '<br><br>' +
-					"<span class='chars'>Characters: " + textCharCount + "</span"> +
+					"<span class='chars'>Characters: " + textCharCount + "</span>" +
 					"<br>Words: " + textWordCount +
 					"<br>Max Chars: " + maxChars);
 				if (textCharCount > maxChars) {
-					$('.chars').css({color: 'red'})
+					$(helpBox.find('.chars')).css({color: 'red'})
 				} else if (textCharCount + 20  > maxChars) {
-					$('.chars').css({color: 'orange'})
+					$(helpBox.find('.chars')).css({color: 'orange'})
 				}
 			}
 		});
