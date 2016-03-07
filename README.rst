@@ -1,5 +1,5 @@
 ===============
-wagtail-linkchecker
+wagtail-charcount
 ===============
 
 A wagtail character and word counting plugin for RichTextFields.
