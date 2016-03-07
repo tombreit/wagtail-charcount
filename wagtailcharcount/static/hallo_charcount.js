@@ -3,7 +3,6 @@ $(function (){
 	var parentElement = rich_text_area.parent().parent().parent().parent();
 	var helpBox = parentElement.find('.object-help');
 	if (helpBox.html()) {
-		console.log('the helpbox exists')
 		helpBox.addClass('charcount');
 	} else {
 		var helpBoxExists = true
@@ -31,6 +30,8 @@ $(function (){
 				"<br><span class='backend-count'>Backend Count: " + backendCount + '</span>');
 			if (backendCount > maxChars) {
 				$('.backend-count').css({color: 'red'})
+			} else if (backendCount + 20  > maxChars) {
+				$('.backend-count').css({color: 'orange'})
 			}
 		} else {
 			$('.charcount').show();
@@ -39,8 +40,10 @@ $(function (){
 				"<br>Words: " + textWordCount +
 				"<br>Max Chars: " + maxChars +
 				"<br><span class='backend-count'>Backend Count: " + backendCount + '</span>');
-			if (backendCount > maxChars) {
+			if (backendCount  > maxChars) {
 				$('.backend-count').css({color: 'red'})
+			} else if (backendCount + 20  > maxChars) {
+				$('.backend-count').css({color: 'orange'})
 			}
 		}
 	});
