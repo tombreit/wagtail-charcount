@@ -27,15 +27,13 @@ $(function (){
 			if (charCountElemText.length > 1) {
 				helpBox.css({opacity :1});
 				helpBox.html(
-					charCountElemText + '<br><br>' +
-					"Visible characters: " + textCharCount +
-					"<br>Words: " + textWordCount +
-					"<br>Max Chars: " + maxChars +
-					"<br><span class='backend-count'>Backend Count: " + backendCount + '</span>');
+					charCountElemText + '<br>' +
+					"<br>" + textWordCount + " Words" +
+					"<br><span class='count'>" + backendCount + '/' + maxChars + '</span> Characters');
 				if (backendCount > maxChars) {
-					$('.backend-count').css({color: 'red'})
+					$('.count').css({color: 'red'})
 				} else if (backendCount + 20  > maxChars) {
-					$('.backend-count').css({color: 'orange'})
+					$('.count').css({color: 'orange'})
 				}
 			} else {
 				helpBox.show();
@@ -82,27 +80,27 @@ $(function (){
 			}
 			if (charCountElemText.length > 1) {
 				helpBox.css({opacity :1});
-				var helpBoxContent = (charCountElemText + '<br><br>' +
-					"<span class='chars'>Characters: " + textCharCount + "</span>" +
-					"<br>Words: " + textWordCount +
-					"<br>Max Chars: " + maxChars);
+				var helpBoxContent = (charCountElemText + '<br>' +
+					"<br>" + textWordCount + " Words" +
+					"<br><span class='count'>" + textCharCount + '/' + maxChars + '</span> Characters');
+
 				helpBox.html(helpBoxContent);
 				console.log(helpBoxContent);
 				if (textCharCount > maxChars) {
-					$('.chars').css({color: 'red'})
+					$('.count').css({color: 'red'})
 				} else if (textCharCount + 20  > maxChars) {
-					$('.chars').css({color: 'orange'})
+					$('.count').css({color: 'orange'})
 				}
 			} else {
 				helpBox.show();
 				helpBox.html(
-					"<span class='chars'>Characters: " + textCharCount + "</span>" +
-					"<br>Words: " + textWordCount +
-					"<br>Max Chars: " + maxChars);
+					"<br>" + textWordCount + " Words" +
+					"<br><span class='count'>" + textCharCount + '/' + maxChars + '</span> Characters'
+				);
 				if (textCharCount > maxChars) {
-					$(helpBox.find('.chars')).css({color: 'red'})
+					$(helpBox.find('.count')).css({color: 'red'})
 				} else if (textCharCount + 20  > maxChars) {
-					$(helpBox.find('.chars')).css({color: 'orange'})
+					$(helpBox.find('.count')).css({color: 'orange'})
 				}
 			}
 		});
