@@ -5,7 +5,6 @@ $(function (){
 	if (helpBox.html()) {
 		console.log('the helpbox exists')
 		helpBox.addClass('charcount');
-		helpBox.css({opacity :1});
 	} else {
 		var helpBoxExists = true
 		var elem = parentElement.append("<div style='opacity:1;' class='object-help help charcount'></div>");
@@ -23,6 +22,7 @@ $(function (){
 		var textCharCount = textNoWhitespace.length - 1;
 		var backendCount = $('.richtext').html().length;
 		if (charCountElemText.length > 1) {
+			$('.charcount').css({opacity :1});
 			$('.charcount').html(
 				charCountElemText + '<br><br>' +
 				"Visible characters: " + textCharCount +
