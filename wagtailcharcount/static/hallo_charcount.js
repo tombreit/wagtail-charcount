@@ -28,8 +28,8 @@ $(function (){
 				helpBox.css({opacity :1});
 				helpBox.html(
 					charCountElemText + '<br>' +
-					"<br>" + textWordCount + " Words" +
-					"<br><span class='count'>" + backendCount + '/' + maxChars + '</span> Characters');
+					"<br>" + textWordCount + " words" +
+					"<br><span class='count'>" + backendCount + ' / ' + maxChars + '</span> characters');
 				if (backendCount > maxChars) {
 					$('.count').css({color: 'red'})
 				} else if (backendCount + 20  > maxChars) {
@@ -38,10 +38,8 @@ $(function (){
 			} else {
 				helpBox.show();
 				helpBox.html(
-					"Visible characters: " + textCharCount +
-					"<br>Words: " + textWordCount +
-					"<br>Max Chars: " + maxChars +
-					"<br><span class='backend-count'>Backend Count: " + backendCount + '</span>');
+					textWordCount + " words" +
+					"<br><span class='count'>" + backendCount + ' / ' + maxChars + '</span> characters');
 				if (backendCount  > maxChars) {
 					$('.backend-count').css({color: 'red'})
 				} else if (backendCount + 20  > maxChars) {
@@ -81,8 +79,8 @@ $(function (){
 			if (charCountElemText.length > 1) {
 				helpBox.css({opacity :1});
 				var helpBoxContent = (charCountElemText + '<br>' +
-					"<br>" + textWordCount + " Words" +
-					"<br><span class='count'>" + textCharCount + '/' + maxChars + '</span> Characters');
+					"<br>" + textWordCount + " words" +
+					"<br><span class='count'>" + textCharCount + ' / ' + maxChars + '</span> characters');
 
 				helpBox.html(helpBoxContent);
 				console.log(helpBoxContent);
@@ -94,8 +92,8 @@ $(function (){
 			} else {
 				helpBox.show();
 				helpBox.html(
-					"<br>" + textWordCount + " Words" +
-					"<br><span class='count'>" + textCharCount + '/' + maxChars + '</span> Characters'
+					"<br>" + textWordCount + " words" +
+					"<br><span class='count'>" + textCharCount + ' / ' + maxChars + '</span> characters'
 				);
 				if (textCharCount > maxChars) {
 					$(helpBox.find('.count')).css({color: 'red'})
