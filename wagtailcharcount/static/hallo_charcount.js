@@ -31,9 +31,9 @@ $(function (){
 					"<br>" + textWordCount + " words" +
 					"<br><span class='count'>" + backendCount + ' / ' + maxChars + '</span> characters');
 				if (backendCount > maxChars) {
-					$('.count').css({color: 'red'})
+					$(helpBox.find('.count')).css({color: 'red'})
 				} else if (backendCount + 20  > maxChars) {
-					$('.count').css({color: 'orange'})
+					$(helpBox.find('.count')).css({color: 'orange'})
 				}
 			} else {
 				helpBox.show();
@@ -41,9 +41,9 @@ $(function (){
 					textWordCount + " words" +
 					"<br><span class='count'>" + backendCount + ' / ' + maxChars + '</span> characters');
 				if (backendCount  > maxChars) {
-					$('.backend-count').css({color: 'red'})
+					$(helpBox.find('.count')).css({color: 'red'})
 				} else if (backendCount + 20  > maxChars) {
-					$('.backend-count').css({color: 'orange'})
+					$(helpBox.find('.count')).css({color: 'orange'})
 				}
 			}
 		});
@@ -85,14 +85,14 @@ $(function (){
 				helpBox.html(helpBoxContent);
 				console.log(helpBoxContent);
 				if (textCharCount > maxChars) {
-					$('.count').css({color: 'red'})
+					$(helpBox.find('.count')).css({color: 'red'})
 				} else if (textCharCount + 20  > maxChars) {
-					$('.count').css({color: 'orange'})
+					$(helpBox.find('.count')).css({color: 'orange'})
 				}
 			} else {
 				helpBox.show();
 				helpBox.html(
-					"<br>" + textWordCount + " words" +
+					textWordCount + " words" +
 					"<br><span class='count'>" + textCharCount + ' / ' + maxChars + '</span> characters'
 				);
 				if (textCharCount > maxChars) {
