@@ -83,7 +83,6 @@ $(function (){
 					"<br><span class='count'>" + textCharCount + ' / ' + maxChars + '</span> characters');
 
 				helpBox.html(helpBoxContent);
-				console.log(helpBoxContent);
 				if (textCharCount > maxChars) {
 					$(helpBox.find('.count')).css({color: 'red'})
 				} else if (textCharCount + 20  > maxChars) {
